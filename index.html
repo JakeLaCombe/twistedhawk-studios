@@ -1,0 +1,109 @@
+<!Doctype html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <style>
+   html, body {
+     font-family: 'Montserrat', sans-serif;
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     width: 100%;
+   }
+
+   body {
+     display: flex;
+     flex-direction: column;
+   }
+
+    nav {
+      align-items: center;
+      display: flex;
+      min-height: 50px;
+      color: #fff;
+      background-color: #000;
+      padding: 5px 50px;
+    }
+
+    main {
+      flex-grow: 1;
+    }
+
+    nav h1 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .current-game {
+      width: 100%;
+      height: 400px;
+      background-image: url('images/snowman.png');
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 1em;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+    }
+
+    .blog {
+      padding: 10px;
+    }
+
+    .games {
+      padding: 10px 50px;
+    }
+
+    .games img {
+      box-shadow: 3px 2px 2px -1px #555;
+    }
+
+    img {
+      max-width: 100%;;
+    }
+
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 10px 50px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      .games {
+        display: block;
+      }
+
+      .games img {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="images/logo.svg" height="50"/>
+    <h1>TwistedHawk Studios</h1>
+  </nav>
+  <div class="current-game"></div>
+  <main>
+    <h1 class="section-title">Games</h1>
+    <section class="games">
+      <img src="images/flowergirl.png" />
+      <img src="images/johnhenry.png" />
+      <img src="images/snowman_logo.png" />
+    </section>
+  </main>
+  <footer>
+    Copyright TwistedHawk Studios
+  </footer>
+</body>
+</html>
