@@ -1,10 +1,10 @@
 <!Doctype html>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/vvi0ydx.css">
   <style>
    html, body {
-     font-family: 'Montserrat', sans-serif;
+     font-family: 'copperplate', 'Helvetica', 'Helvetica Neue', sans-serif;
      margin: 0;
      padding: 0;
      height: 100%;
@@ -35,13 +35,24 @@
     }
 
     .current-game {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
       width: 100%;
-      height: 400px;
+      height: 300px;
       background-image: url('images/snowman.png');
       background-position: bottom;
       background-repeat: no-repeat;
       background-size: cover;
       margin-bottom: 1em;
+    }
+
+    .current-game img {
+      height: 200px;
+    }
+
+    .visibility-hidden {
+      visibility: hidden;
     }
 
     .games {
@@ -67,9 +78,15 @@
     }
 
     footer {
+      display: flex;
+      flex-shrink: 0;
       background: #000;
       color: #fff;
       padding: 10px 50px;
+    }
+
+    footer .twitter {
+      margin-left: auto;
     }
 
     .section-title {
@@ -85,25 +102,41 @@
       .games img {
         margin-bottom: 20px;
       }
+
+      .current-game {
+        align-items: flex-start;
+      }
+
+      .current-game img {
+        margin: 20px;
+        height: 100px;
+      }
     }
+
   </style>
 </head>
 <body>
   <nav>
     <img src="images/logo.svg" height="50"/>
     <h1>TwistedHawk Studios</h1>
+    <img class="visibility-hidden" src="images/logo.svg" height="50"/>
   </nav>
-  <div class="current-game"></div>
+  <div class="current-game">
+    <img src="images/melt_title.png" />
+  </div>
   <main>
     <h1 class="section-title">Games</h1>
     <section class="games">
-      <img src="images/flowergirl.png" />
-      <img src="images/johnhenry.png" />
-      <img src="images/snowman_logo.png" />
+      <a href="https://twistedhawk.itch.io/flower-girl"><img src="images/flowergirl.png" /></a>
+      <a href="https://twistedhawk.itch.io/john-henrys-epic-race"><img src="images/johnhenry.png" /></a>
+      <a href="https://twistedhawk.itch.io/dont-let-me-melt"><img src="images/snowman_logo.png" /></a>
     </section>
   </main>
   <footer>
-    Copyright TwistedHawk Studios
+    TwistedHawk Studios &#9400; 2018
+    <a class="twitter" href="https://twitter.com/jakelacombekc">
+      <img class="twitter" src="images/twitter.png" height="25" width="25" />
+    </a>
   </footer>
 </body>
 </html>
